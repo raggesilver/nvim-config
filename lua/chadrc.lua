@@ -5,13 +5,49 @@
 ---@type ChadrcConfig
 local M = {}
 
+M.ui = {
+  telescope = {
+    style = "bordered",
+  },
+  cmp = {
+    style = "atom_colored",
+    icons = true,
+  },
+  statusline = {
+    theme = "minimal",
+    separator_style = "round",
+    order = {
+      "mode",
+      "git",
+      "%=",
+      "lsp_msg",
+      -- "copilot",
+      "%=",
+      "diagnostics",
+      "cursor",
+    },
+  },
+}
+
 M.base46 = {
-	theme = "onedark",
+	theme = "gruvbox",
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },
 	-- },
+}
+
+M.nvdash = {
+  load_on_startup = true,
+}
+
+M.lsp = {
+  signature = true,
+}
+
+M.colorify = {
+  enabled = false,
 }
 
 return M

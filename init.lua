@@ -1,6 +1,10 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
+-- Add npm to PATH
+local npm_path = "/opt/homebrew/opt/node@22/bin" -- Actual path to npm
+vim.env.PATH = vim.env.PATH .. ":" .. npm_path
+
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
