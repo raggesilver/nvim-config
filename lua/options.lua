@@ -14,6 +14,10 @@ o.swapfile = false
 o.title = true
 o.titlestring = "%t"
 
+o.list = true
+-- Just trailing whitespace and newline
+o.listchars = "trail:·,eol:¬"
+
 if vim.g.neovide then
   -- Put anything you want to happen only in Neovide here
   o.guifont = "ZedMono Nerd Font:h13"
