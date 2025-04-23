@@ -12,6 +12,12 @@ o.swapfile = false
 o.title = true
 o.titlestring = "%t"
 
+o.mousescroll = "hor:0" -- Disable horizontal scrolling
+
+o.list = true
+-- Trailing whitespace and newline only
+o.listchars = "trail:·,eol:¬"
+
 if vim.g.neovide then
   -- Put anything you want to happen only in Neovide here
   o.guifont = "ZedMono NF Extd:h13"
@@ -20,6 +26,8 @@ if vim.g.neovide then
   vim.g.neovide_cursor_smooth_blink = true
   vim.g.neovide_floating_shadow = false
 
-  vim.g.neovide_transparency = 0.8
-  vim.g.neovide_window_blurred = true
+  -- vim.g.neovide_input_macos_option_key_is_meta = "only_left"
+
+  -- vim.g.neovide_transparency = 0.96
+  -- vim.g.neovide_window_blurred = true
 end

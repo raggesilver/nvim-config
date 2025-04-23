@@ -7,7 +7,7 @@ local configs = require "nvchad.configs.lspconfig"
 -- EXAMPLE
 local servers = {
   html = {},
-  cssls = {},
+  cssls = { settings = { css = { lint = { unknownAtRules = "ignore" } } } },
   eslint = {},
   -- tailwindcss = {},
   unocss = {},
@@ -49,7 +49,7 @@ local servers = {
       },
     },
   },
-  volar = {},
+  volar = { settings = { css = { lint = { unknownAtRules = "ignore" } } } },
   vala_ls = {},
   clangd = {
     on_attach = function(client, bufnr)
@@ -57,7 +57,7 @@ local servers = {
       configs.on_attach(client, bufnr)
     end,
     cmd = {
-      "/usr/local/opt/llvm/bin/clangd",
+      "/Users/paulo/.local/share/nvim/mason/bin/clangd",
       "--offset-encoding=utf-16",
     },
     filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "arduino" },
